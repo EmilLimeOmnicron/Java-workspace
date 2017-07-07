@@ -4,5 +4,9 @@
  * 
  */
 public class Inventory {
+	
+	public static void SumInventory(int a, int b) {
+		
+	}
 
 }
