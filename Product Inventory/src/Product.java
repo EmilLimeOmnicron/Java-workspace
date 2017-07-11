@@ -7,6 +7,7 @@
 public class Product {
 	static double mPrice;
 	static int mID, mQuantity;
+	static String mName;
 	
 	//Start Accessors and Mutators
     public static double GetPrice() {
@@ -33,11 +34,19 @@ public class Product {
     	mQuantity = quantity;
     }
     
+    public static void SetName(String name) {
+    	mName = name;
+    }
+    
+    public static String GetName() {
+    	return mName;
+    }
 	//End Accessors and Mutators
     
     
     // Constructor
-    Product(double price, int id, int quantity) {
+    Product(String name, double price, int id, int quantity) {
+    	mName = name;
     	mPrice = price;
     	mID = id;
     	mQuantity = quantity;

@@ -4,9 +4,13 @@
  * 
  */
 public class Inventory {
-	
-	public static void SumInventory(int a, int b) {
+	public static void addProduct() {
 		
 	}
+	
+	public static void removeProduct() {
+		
+	}
+	
 
 }
