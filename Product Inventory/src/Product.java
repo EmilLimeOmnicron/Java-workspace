@@ -5,53 +5,54 @@
  * and quantity on hand.
  */
 public class Product {
-	static double mPrice;
-	static int mID, mQuantity;
-	static String mName;
+	private  String mPrice, mID, mQuantity, mName;
 	
 	//Start Accessors and Mutators
-    public static double GetPrice() {
+    public String GetName() {
+    	return mName;
+    }
+    
+    public void SetName(String name) {
+    	mName = name;
+    }
+    public String GetPrice() {
     	return mPrice;
     }
      
-    public static void SetPrice(double price) { 
+    public void SetPrice(String price) { 
        mPrice = price;
     }
     
-    public static int GetID() {
+    public String GetID() {
     	return mID;
     }
     
-    public static void SetID(int id) {
+    public void SetID(String id) {
     	mID = id;
     }
     
-    public static int GetQuantity() {
+    public String GetQuantity() {
     	return mQuantity;
     }
     
-    public static void SetQuantity(int quantity) {
+    public void SetQuantity(String quantity) {
     	mQuantity = quantity;
     }
-    
-    public static void SetName(String name) {
-    	mName = name;
-    }
-    
-    public static String GetName() {
-    	return mName;
-    }
+
 	//End Accessors and Mutators
     
     
     // Constructor
-    Product(String name, double price, int id, int quantity) {
+  /*  Product(String name, String price, String id, String quantity) {
     	mName = name;
     	mPrice = price;
     	mID = id;
     	mQuantity = quantity;
     }
-	
+	*/
+    public String toString() {
+    	return "{" + mName + "|" + mPrice + "|" + mID + "|" + mQuantity + "}";
+    }
 	
 	
 }

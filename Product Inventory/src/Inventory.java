@@ -4,11 +4,11 @@
  * 
  */
 public class Inventory {
-	public static void addProduct() {
+	public void addProduct() {
 		
 	}
 	
-	public static void removeProduct() {
+	public void removeProduct() {
 		
 	}
 	
