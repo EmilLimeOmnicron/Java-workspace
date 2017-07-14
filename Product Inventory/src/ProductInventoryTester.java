@@ -22,29 +22,18 @@ public class ProductInventoryTester {
 	//
 	public static void main(String[] args) throws FileNotFoundException {
 
-		CSVReader reader = new CSVReader(new FileReader("inventory.csv"), ',');
+		Scanner sc = new Scanner(new File("inventory.csv"));
+		sc.useDelimiter(",");
 
 		List<Product> prod = new ArrayList<Product>();
 
-		// read line by line
 		String[] nextLine;
-//		(record = reader.readNext()) != null
-		
-		try {
-			while ((nextLine = reader.readNext()) != null )  {
-				Product p = new Product();
-				p.SetName(nextLine[0]);
-				p.SetPrice(nextLine[1]);
-				p.SetID(nextLine[2]);
-				p.SetQuantity(nextLine[3]);
-				prod.add(p);
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-		System.out.println(prod);
+		while (sc.hasNext())  {
+			System.out.print(sc.next() + "|");
+		}
+		sc.close();
+
 
 		
 	}
